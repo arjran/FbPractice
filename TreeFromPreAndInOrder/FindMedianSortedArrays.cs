@@ -33,7 +33,6 @@ namespace FacebookPractice
                 var i = iMin + (iMax - iMin) / 2;
                 var j = mid - i;
 
-                // Else continue divide and conquer.
                 if (j > 0 && i < nums1.Length && nums1[i] < nums2[j - 1])
                 {
                     iMin = i + 1;
@@ -73,7 +72,6 @@ namespace FacebookPractice
                     {
                         minRight = nums1[i];
                     }
-                    // Condition met where equals halves present around the indices, return result.
                     else
                     {
                         minRight = Math.Min(nums1[i], nums2[j]);
