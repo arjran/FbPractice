@@ -17,8 +17,8 @@ namespace FacebookPractice
             //var arr1 = new int[] { 1, 3, 8, 9, 15,33 };
             //var arr2 = new int[] { 7, 11, 18, 19, 21, 25 };
 
-            var arr1 = new int[] { 1, 2 };
-            var arr2 = new int[] { 3, 4 };
+            var arr1 = new int[] { 3 };
+            var arr2 = new int[] {  };
 
 
             Console.WriteLine("The median is: {0}", new FindMedianSortedArrays().Run(arr1, arr2));
