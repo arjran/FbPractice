@@ -46,6 +46,7 @@
     <Compile Include="BuildTreeFromPreAndInOrder.cs" />
     <Compile Include="DataStructures\LinkedList.cs" />
     <Compile Include="DataStructures\TreeNode.cs" />
+    <Compile Include="FindMedianSortedArrays.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

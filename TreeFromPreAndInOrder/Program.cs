@@ -8,7 +8,20 @@ namespace FacebookPractice
         static void Main(string[] args)
         {
             //BuildTreeFromPreAndInOrder();
-            AddTwoLLNumbers();
+            //AddTwoLLNumbers();
+            FindMedianSortedArrays();
+            Console.ReadLine();
+        }
+        private static void FindMedianSortedArrays()
+        {
+            //var arr1 = new int[] { 1, 3, 8, 9, 15,33 };
+            //var arr2 = new int[] { 7, 11, 18, 19, 21, 25 };
+
+            var arr1 = new int[] { 1, 2 };
+            var arr2 = new int[] { 3, 4 };
+
+
+            Console.WriteLine("The median is: {0}", new FindMedianSortedArrays().Run(arr1, arr2));
         }
 
         private static void BuildTreeFromPreAndInOrder()
@@ -65,7 +78,7 @@ namespace FacebookPractice
             {
                 Console.Write(result.Value);
                 result = result.Next;
-                if(result != null)
+                if (result != null)
                 {
                     Console.Write(" -> ");
                 }
