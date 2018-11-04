@@ -9,16 +9,24 @@ namespace FacebookPractice
         {
             //BuildTreeFromPreAndInOrder();
             //AddTwoLLNumbers();
-            FindMedianSortedArrays();
+            //FindMedianSortedArrays();
+
+            LengthOfLongestSubstring();
             Console.ReadLine();
         }
+
+        private static void LengthOfLongestSubstring()
+        {
+            Console.WriteLine("The length of longest substring is: {0}", new LengthOfLongestSubstring().Run("dvdf"));
+        }
+
         private static void FindMedianSortedArrays()
         {
             //var arr1 = new int[] { 1, 3, 8, 9, 15,33 };
             //var arr2 = new int[] { 7, 11, 18, 19, 21, 25 };
 
             var arr1 = new int[] { 3 };
-            var arr2 = new int[] {  };
+            var arr2 = new int[] { };
 
 
             Console.WriteLine("The median is: {0}", new FindMedianSortedArrays().Run(arr1, arr2));
@@ -37,7 +45,6 @@ namespace FacebookPractice
             Console.WriteLine("Root value: {0}", result.Item1.Value);
             Console.WriteLine("Left value: {0}", result.Item1.Left.Value);
             Console.WriteLine("Right value: {0}", result.Item1.Right.Value);
-            Console.ReadLine();
         }
 
         private static void AddTwoLLNumbers()
@@ -83,8 +90,6 @@ namespace FacebookPractice
                     Console.Write(" -> ");
                 }
             }
-
-            Console.ReadLine();
         }
     }
 }
