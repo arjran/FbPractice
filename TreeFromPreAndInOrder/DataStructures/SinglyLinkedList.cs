@@ -1,8 +1,8 @@
 ﻿namespace FacebookPractice.DataStructures
 {
-    class LinkedList<T>
+    class SinglyLinkedList<T>
     {
         public T Value { get; set; }
-        public LinkedList<T> Next { get; set; }
+        public SinglyLinkedList<T> Next { get; set; }
     }
 }

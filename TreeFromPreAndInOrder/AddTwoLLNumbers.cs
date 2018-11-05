@@ -4,22 +4,22 @@ namespace FacebookPractice
 {
     class AddTwoLLNumbers
     {
-        public LinkedList<int> Run(LinkedList<int> firstList, LinkedList<int> secondList)
+        public SinglyLinkedList<int> Run(SinglyLinkedList<int> firstList, SinglyLinkedList<int> secondList)
         {
-            LinkedList<int> listStart = null;
-            LinkedList<int> resultList = null;
+            SinglyLinkedList<int> listStart = null;
+            SinglyLinkedList<int> resultList = null;
             var carryOver = false;
 
             while (firstList != null || secondList != null || carryOver)
             {
                 if (resultList == null)
                 {
-                    resultList = new LinkedList<int>();
+                    resultList = new SinglyLinkedList<int>();
                     listStart = resultList;
                 }
                 else
                 {
-                    resultList.Next = new LinkedList<int>();
+                    resultList.Next = new SinglyLinkedList<int>();
                     resultList = resultList.Next;
                 }
                 

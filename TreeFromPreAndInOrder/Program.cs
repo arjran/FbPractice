@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FacebookPractice.LeetCode;
+using System;
 using System.Collections.Generic;
 
 namespace FacebookPractice
@@ -10,9 +11,48 @@ namespace FacebookPractice
             //BuildTreeFromPreAndInOrder();
             //AddTwoLLNumbers();
             //FindMedianSortedArrays();
+            //LengthOfLongestSubstring();
 
-            LengthOfLongestSubstring();
+            MergeKSortedLL();
             Console.ReadLine();
+        }
+
+        private static void MergeKSortedLL()
+        {
+            var list1 = new ListNode(1)
+            {
+                next = new ListNode(4)
+                {
+                    next = new ListNode(5)
+                }
+
+            };
+
+            var list2 = new ListNode(1)
+            {
+                next = new ListNode(3)
+                {
+                    next = new ListNode(4)
+                }
+            };
+
+            var list3 = new ListNode(2)
+            {
+                next = new ListNode(6)
+            };
+
+            var lists = new ListNode[]
+            {
+                list1,list2,list3
+            };
+
+            var result = new MergeKSortedLL().Run(lists);
+
+            while (result != null)
+            {
+                Console.Write("     {0}", result.val);
+                result = result.next;
+            }
         }
 
         private static void LengthOfLongestSubstring()
@@ -49,29 +89,29 @@ namespace FacebookPractice
 
         private static void AddTwoLLNumbers()
         {
-            var linkedList1 = new DataStructures.LinkedList<int>
+            var linkedList1 = new DataStructures.SinglyLinkedList<int>
             {
                 Value = 0,
-                Next = new DataStructures.LinkedList<int>
+                Next = new DataStructures.SinglyLinkedList<int>
                 {
                     Value = 0,
-                    Next = new DataStructures.LinkedList<int>
+                    Next = new DataStructures.SinglyLinkedList<int>
                     {
                         Value = 1
                     }
                 }
             };
 
-            var linkedList2 = new DataStructures.LinkedList<int>
+            var linkedList2 = new DataStructures.SinglyLinkedList<int>
             {
                 Value = 0,
-                Next = new DataStructures.LinkedList<int>
+                Next = new DataStructures.SinglyLinkedList<int>
                 {
                     Value = 0,
-                    Next = new DataStructures.LinkedList<int>
+                    Next = new DataStructures.SinglyLinkedList<int>
                     {
                         Value = 9,
-                        Next = new DataStructures.LinkedList<int>
+                        Next = new DataStructures.SinglyLinkedList<int>
                         {
                             Value = 9
                         }
