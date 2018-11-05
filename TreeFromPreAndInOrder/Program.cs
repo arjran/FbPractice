@@ -21,32 +21,33 @@ namespace FacebookPractice
         {
             var list1 = new ListNode(1)
             {
-                next = new ListNode(4)
-                {
-                    next = new ListNode(5)
-                }
-
             };
 
-            var list2 = new ListNode(1)
-            {
-                next = new ListNode(3)
-                {
-                    next = new ListNode(4)
-                }
-            };
+            //var list2 = new ListNode(-3)
+            //{
+            //    next = new ListNode(1)
+            //    {
+            //        next = new ListNode(4)
+            //    }
+            //};
 
-            var list3 = new ListNode(2)
-            {
-                next = new ListNode(6)
-            };
+            //var list3 = new ListNode(-2)
+            //{
+            //    next = new ListNode(-1)
+            //    {
+            //        next= new ListNode(0)
+            //        {
+            //            next = new ListNode(2)
+            //        }
+            //    }
+            //};
 
             var lists = new ListNode[]
             {
-                list1,list2,list3
+                list1
             };
 
-            var result = new MergeKSortedLL().Run(lists);
+            var result = new MergeKSortedLL().Run1(lists);
 
             while (result != null)
             {
