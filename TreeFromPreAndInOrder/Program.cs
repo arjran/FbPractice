@@ -13,38 +13,71 @@ namespace FacebookPractice
             //FindMedianSortedArrays();
             //LengthOfLongestSubstring();
 
-            MergeKSortedLL();
+            Console.WriteLine(new StrangePrinter().Run("bbdabcdababadcbdbcbdcbccaacadadccbacabdcdb"));
+            //MergeKSortedLL();
+
+            //int[] i = { 5, 10, 15, 20, 25 };
+            //IsListParameterPassingReferencePointer(i);
+
+
+            //Console.WriteLine("i[2]: {0}", i[2]);
+
+            //ListNode node = new ListNode(5)
+            //{
+            //    next = new ListNode(10)
+            //};
+
+            //Console.WriteLine("listNode.next.val before function call: {0}", node.next.val);
+            //IsObjectReferenceBased(node);
+            //Console.WriteLine("listNode.next.val after function call: {0}", node.next.val);
+
             Console.ReadLine();
+        }
+
+        private static void IsObjectReferenceBased(ListNode listNode)
+        {
+            listNode.next.val = 20;
+        }
+
+        private static void IsListParameterPassingReferencePointer(int[] j)
+        {
+            Console.WriteLine("j[2] before changing: {0}", j[2]);
+            j[2] = 100;
+            Console.WriteLine("j[2] after changing: {0}", j[2]);
         }
 
         private static void MergeKSortedLL()
         {
-            var list1 = new ListNode(1)
+            var list1 = new ListNode(-1)
             {
+                next = new ListNode(0)
+                {
+                    next = new ListNode(4)
+                }
             };
 
-            //var list2 = new ListNode(-3)
-            //{
-            //    next = new ListNode(1)
-            //    {
-            //        next = new ListNode(4)
-            //    }
-            //};
+            var list2 = new ListNode(-3)
+            {
+                next = new ListNode(1)
+                {
+                    next = new ListNode(4)
+                }
+            };
 
-            //var list3 = new ListNode(-2)
-            //{
-            //    next = new ListNode(-1)
-            //    {
-            //        next= new ListNode(0)
-            //        {
-            //            next = new ListNode(2)
-            //        }
-            //    }
-            //};
+            var list3 = new ListNode(-2)
+            {
+                next = new ListNode(-1)
+                {
+                    next = new ListNode(0)
+                    {
+                        next = new ListNode(2)
+                    }
+                }
+            };
 
             var lists = new ListNode[]
             {
-                list1
+                list1, list2, list3
             };
 
             var result = new MergeKSortedLL().Run1(lists);

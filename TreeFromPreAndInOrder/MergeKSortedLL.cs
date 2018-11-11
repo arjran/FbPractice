@@ -16,18 +16,15 @@ namespace FacebookPractice
                 return lists.Length == 0 ? null : lists[0];
             }
 
-            if (start >= end) { return null; }
+            if (start == end) { return lists[start]; }
             int mid = (start + end) / 2;
-            SortLists(lists, start, mid);
-            SortLists(lists, mid + 1, end);
-            return Merge(lists, start, end);
+            ListNode l1 = SortLists(lists, start, mid);
+            ListNode l2 = SortLists(lists, mid + 1, end);
+            return Merge(l1, l2);
         }
 
-        private ListNode Merge(ListNode[] lists, int start, int end)
+        private ListNode Merge(ListNode list1, ListNode list2)
         {
-            var list1 = lists[start];
-            var list2 = lists[end];
-
             var head = list2;
             ListNode prev = null;
 
@@ -66,11 +63,6 @@ namespace FacebookPractice
                 {
                     head = list1;
                 }
-            }
-
-            for (int i = start; i <= end; i++)
-            {
-                lists[i] = head;
             }
 
             return head;
